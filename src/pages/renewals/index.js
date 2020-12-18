@@ -3,7 +3,7 @@ import React from "react";
 import AnimateHeight from 'react-animate-height';
 
 // eslint-disable-next-line no-unused-vars
-import lodash from 'lodash';
+import ReactScroll from 'react-scroll';
 
 
 import "./index.css";

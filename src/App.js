@@ -4,7 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 
 const Renewals = React.lazy(() =>
-    import("./pages/renewals" /* webpackChunkName: "renewals" */)
+    import("./pages/Renewals" /* webpackChunkName: "renewals" */)
 );
 const Journey = React.lazy(() =>
     import("./Journey" /* webpackChunkName: "journey" */)
@@ -18,12 +18,12 @@ function App() {
                 <div className="main">
                     <Switch>
                         <Route path="/renewals">
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<div>Renewals skeleton?</div>}>
                                 <Renewals />
                             </Suspense>
                         </Route>
                         <Route path="*">
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<div>Journey skeleton?</div>}>
                                 <Journey />
                             </Suspense>
                         </Route>

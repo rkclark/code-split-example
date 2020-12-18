@@ -6,13 +6,13 @@ export default function Nav() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/journey/one">Journey One</Link>
+                    <Link to="/journey/your-vehicle">Your Vehicle</Link>
                 </li>
                 <li>
-                    <Link to="/journey/two">Journey Two</Link>
+                    <Link to="/journey/your-details">Your Details</Link>
                 </li>
                 <li>
-                    <Link to="/journey/three">Journey Three</Link>
+                    <Link to="/journey/your-policy">Your Policy</Link>
                 </li>
                 <li>
                     <Link to="/renewals">Renewals</Link>

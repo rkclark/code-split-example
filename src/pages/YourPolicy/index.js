@@ -1,13 +1,13 @@
 import React from "react";
 // eslint-disable-next-line no-unused-vars
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 import "./index.css";
 
-export default function JourneyTwo() {
+export default function YourPolicy() {
     return (
         <div className="journey">
-            <h1>Journey Two</h1>
+            <h1>Your Policy</h1>
         </div>
     );
 }
