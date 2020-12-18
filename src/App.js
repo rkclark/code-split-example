@@ -1,30 +1,31 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Renewals from "./pages/renewals";
-import Journey from "./pages/journey";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import Nav from "./components/Nav";
+
+const Renewals = React.lazy(() =>
+    import("./pages/renewals" /* webpackChunkName: "renewals" */)
+);
+const Journey = React.lazy(() =>
+    import("./Journey" /* webpackChunkName: "journey" */)
+);
 
 function App() {
     return (
         <div className="App">
             <Router>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Journey</Link>
-                        </li>
-                        <li>
-                            <Link to="/renewals">Renewals</Link>
-                        </li>
-                    </ul>
-                </nav>
-
+                <Nav />
                 <div className="main">
                     <Switch>
                         <Route path="/renewals">
-                            <Renewals />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Renewals />
+                            </Suspense>
                         </Route>
                         <Route path="*">
-                            <Journey />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Journey />
+                            </Suspense>
                         </Route>
                     </Switch>
                 </div>
