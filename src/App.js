@@ -6,6 +6,11 @@ import Nav from "./components/Nav";
 const Renewals = React.lazy(() =>
     import("./pages/Renewals" /* webpackChunkName: "renewals" */)
 );
+
+const Autocheck = React.lazy(() =>
+    import("./pages/Autocheck" /* webpackChunkName: "autocheck" */)
+);
+
 const Journey = React.lazy(() =>
     import("./Journey" /* webpackChunkName: "journey" */)
 );
@@ -22,6 +27,13 @@ function App() {
                                 <Renewals />
                             </Suspense>
                         </Route>
+
+                        <Route path="/autocheck">
+                            <Suspense fallback={<div>Autocheck skeleton?</div>}>
+                                <Autocheck />
+                            </Suspense>
+                        </Route>
+
                         <Route path="*">
                             <Suspense fallback={<div>Journey skeleton?</div>}>
                                 <Journey />

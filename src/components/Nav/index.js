@@ -17,6 +17,9 @@ export default function Nav() {
                 <li>
                     <Link to="/renewals">Renewals</Link>
                 </li>
+                <li>
+                    <Link to="/autocheck">Autocheck</Link>
+                </li>
             </ul>
         </nav>
     );
